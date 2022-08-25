@@ -1,86 +1,88 @@
-/* reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* aplicacion sass */
+/*variables*/
 /* MENU */
-
-header{
-    background-color: rgb(31, 31, 31);
-    top: 0;
-    z-index: 0;
-    display: grid;
-}
-
-header .img-center {
+header {
+  background-color: #1f1f1f;
+  top: 0;
+  z-index: 0;
+  display: grid; }
+  header img {
     padding-top: 15px;
     display: block;
     margin-left: auto;
-    margin-right: auto;
-}
-
-header nav ul{
+    margin-right: auto; }
+  header nav ul {
     list-style: none;
-    text-align: center;
-}
-
-header nav ul li{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: inline-block;
-    font-size: 20px;
-    padding: 15px;
-    font-weight: bold;
-    text-align: center;
-}
-
-header nav ul li a{
-    color: rgb(143, 27, 27);
-    text-decoration: none;
-}
-
-header nav ul li a:hover{
-    color: rgb(102, 20, 20);
-}
+    text-align: center; }
+    header nav ul li {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      display: inline-block;
+      font-size: 20px;
+      padding: 15px;
+      font-weight: bold;
+      text-align: center; }
+      header nav ul li a {
+        color: #8f1b1b;
+        text-decoration: none; }
+      header nav ul li a:hover {
+        color: #661414; }
 
 /*BODY*/
-
-body{
-    background-color: rgb(26, 26, 26);
-}
+body {
+  background-color: #1a1a1a; }
 
 /* FOOTER*/
+footer {
+  background-color: #1f1f1f;
+  margin-top: 100px;
+  display: grid;
+  width: auto;
+  height: auto; }
+  footer div {
+    display: flex; }
+    footer div h4 {
+      text-align: center;
+      color: white;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 17px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      footer div h4 a {
+        color: #8f1b1b;
+        text-decoration: none; }
+      footer div h4 footer div h4 a:hover {
+        color: #661414; }
 
-footer{
-    background-color: rgb(31, 31, 31);
-    margin-top: 100px;
-    display: grid;
-    width: auto;
-    height: auto;
-}
-
-footer div{
-    display: flex;
-}
-
-footer div h4{
-    text-align: center;
-    color: white;
+/* DISCOGRAFIA  */
+.discografia {
+  display: grid; }
+  .discografia h2, .discografia h3, .discografia h4 {
+    color: whitesmoke;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 17px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-} 
+    line-height: 35px;
+    text-align: center; }
+  .discografia h2 {
+    padding-top: 20px;
+    font-size: 35px; }
+  .discografia h3 {
+    padding-top: 20px;
+    font-size: 25px; }
+  .discografia h4 {
+    padding-top: 13px; }
+  .discografia .albumesspotify {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center; }
+    .discografia .albumesspotify .albumspotify {
+      gap: 15px;
+      width: 300px;
+      height: 300px;
+      margin: 25px; }
 
-footer div h4 a{
-    color: rgb(143, 27, 27);
-    text-decoration: none;
-}
 
-footer div h4 a:hover{
-    color: rgb(102, 20, 20);
-}
+
+      
+/* css sin sass */
 
 /* HOME CSS */
 
@@ -105,49 +107,6 @@ footer div h4 a:hover{
     width: 540px;
     height: 300px;
     padding: 10px;
-}
-
-
-/* DISCOGRAFIA CSS */
-
-.discografia{
-    display: grid;
-}
-
-.discografia .discografia-text, .albumes, .albumes-text{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    line-height: 35px;
-    color: whitesmoke;
-}
-
-.discografia .discografia-text{
-    padding-top: 20px;
-    font-size: 35px;
-}
-
-.discografia .albumes{
-    padding-top: 20px;
-    font-size: 25px;
-}
-
-.discografia .albumes-text{
-    padding-top: 13px;
-}
-
-/* albumes spotify discografia */
-
-.discografia .albumesspotify{
-    display: flex;
-    flex-flow: wrap row;
-    align-items: center;
-}
-
-.discografia .albumesspotify .albumspotify{
-    gap: 15px;
-    width: 300px;
-    height: 300px;
-    margin: 25px;
 }
 
 /* TOUR */
