@@ -1,9 +1,8 @@
 /* aplicacion sass */
 
-/*variables*/
-$textcolor: rgb(245, 245, 245);
-$header-color: rgb(31, 31, 31);
-$bg-color: rgb(26, 26, 26);
+
+@import "base/variables";
+@import 'base/mapas';
 
 /* MENU */
 
@@ -25,7 +24,7 @@ header{
         text-align: center;
 
         li{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: $text-font;
             display: inline-block;
             font-size: 20px;
             padding: 15px;
@@ -33,20 +32,19 @@ header{
             text-align: center;
 
             a{
-                color: rgb(143, 27, 27);
+                color: map-get($map: $standard, $key: color-1) ;
                 text-decoration: none;
-                
             }
 
             a:hover{
-                color: rgb(102, 20, 20);
+                color: map-get($map: $standard, $key: color-2) ;
             }
         }
     }
     
 }
 
-/*BODY*/
+/* BODY */
 
 body{
     background-color: $bg-color;
@@ -66,19 +64,19 @@ footer{
 
         h4{
             text-align: center;
-            color: white;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: $textcolor;
+            font-family: $text-font;
             font-size: 17px;
             padding-top: 10px;
             padding-bottom: 10px;
 
             a{
-                color: rgb(143, 27, 27);
+                color: map-get($map: $standard, $key: color-1);
                 text-decoration: none;
             }
 
             footer div h4 a:hover{
-                color: rgb(102, 20, 20);
+                color: map-get($map: $standard, $key: color-2);
             }
         }
 
@@ -88,6 +86,32 @@ footer{
    
 }
 
+/* HOME */
+
+.index{
+    .lo-nuevo{
+        font-family: $text-font;
+        text-align: center;
+        line-height: 35px;
+        color: whitesmoke;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 35px;
+    }
+    .iframe{
+        display: flex;
+        margin: 10px;
+        justify-content: space-around;
+        padding: 30px;
+        .youtube, .spotify{
+            width: 540px;
+            height: 300px;
+            padding: 10px;
+        }
+    }
+}
+
+
 /* DISCOGRAFIA  */
 
 .discografia{
@@ -95,7 +119,7 @@ footer{
 
     h2, h3, h4{
         color: $textcolor;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: $text-font;
         line-height: 35px;
         text-align: center;
     }
@@ -127,3 +151,402 @@ footer{
         }
     }
 }
+
+/* TOUR */
+
+.tour{
+    display: grid;
+
+    .gira{
+        font-family: $text-font;
+        text-align: center;
+        line-height: 35px;
+        color: $textcolor;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 35px;
+    }
+
+    .table{
+        font-family: $text-font;
+        text-align: left;
+        color: $textcolor;
+        border: transparent;
+
+        .lugares, .fechas{
+            font-family: $text-font;
+            text-align: left;
+            color: $textcolor;
+            border: transparent;
+            font-size: 18px;
+            padding: 15px;
+        }
+
+        .botones{
+            color: black;
+            background: $textcolor;
+            border: transparent;
+            size: 10px;
+            font-size: 15px;
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        .botones:hover{
+            background-color: rgb(210, 210, 210);
+        }
+    }
+}
+
+/* FORMULARIOS CSS*/
+
+.formularios{
+    display: grid;
+    width: 485px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: rgb(39, 39, 39); 
+    padding-left: 30px; 
+
+    div{
+
+        h2{
+            font-family: $text-font;
+            text-align: center;
+            line-height: 35px;
+            color: $textcolor;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 35px;
+        }
+
+        div{
+            p{
+                font-family: $text-font;
+                text-align: center;
+                line-height: 35px;
+                color: whitesmoke;
+                padding: 20px;
+                font-size: 20px;
+
+                a{
+                    color: map-get($map: $standard, $key: color-1);
+                }
+
+                a:hover{
+                    color: map-get($map: $standard, $key: color-2);
+                }
+            }
+        }
+    }
+
+    div form{
+
+        p{
+        font-size: 14px; 
+        color: #0e0e0e; 
+            
+            span{
+                color: red;
+            }
+
+            input{
+                background-color: transparent; 
+                width: 410px; 
+                height: 40px; 
+                border-radius: 5px;  
+                border-style: solid; 
+                border-width: 1px; 
+                border-style: none; 
+                margin-top: 10px;  
+                padding: 10px;
+                margin-bottom: 20px; 
+                background-color: #252525;
+            }
+
+            textarea{
+                background-color: #252525; 
+                width: 405px; 
+                height: 150px; 
+                border-radius: 5px;  
+                border-style: solid; 
+                border-width: 1px; 
+                border-color: #252525; 
+                margin-top: 10px;  
+                padding-left: 10px;
+                margin-bottom: 20px; 
+                padding-top: 15px; 
+            } 
+
+            label{
+                display: block; 
+                text-align: center;
+                float: center;  
+                color: $textcolor;
+                font-family: $text-font;
+
+                span{
+                    color: red;
+                }
+            }
+        }
+
+        button{
+            width: 70px;
+            height: 30px;
+            text-decoration: $textcolor;
+        }
+
+        button:hover{
+            background-color: rgb(210, 210, 210);
+        } 
+    }
+      
+    form{
+
+        .formulario .aviso{
+            font-size: 13px;  
+            color: $textcolor;  
+            font-family: $text-font;
+        }
+    }
+
+}
+
+
+/* CONTACTO CSS */
+
+.contacto{
+
+    display: grid;
+
+    h2{
+        font-family: $text-font;
+        text-align: center;
+        line-height: 35px;
+        color: $textcolor;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 35px;
+        color: $textcolor;
+    }
+
+    div p{
+        font-family: $text-font;
+        text-align: center;
+        line-height: 35px;
+        color: whitesmoke;
+        padding: 20px;
+        font-size: 20px;
+    }
+}
+
+/* REGISTRATE CSS */
+
+.iniciar-sesion{
+    display: grid;
+}
+
+
+/* INICIA SESION CSS */
+
+.iniciar-sesion2{
+    display: grid;
+}
+
+
+
+/* mediaqueries ( falta aplicarle bien sass !!!! ) */
+
+/* mobile */
+
+@media screen and (min-width:0px) and (max-width:425px){
+    
+    /* header */ 
+    
+    header nav ul li{
+        padding: 15px;
+    }
+
+    /* footer */
+
+    footer div h4{ 
+        font-size: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* home */
+
+    .index .lo-nuevo{
+        flex-flow: column;
+        font-size: 25px;
+    }
+    
+
+    .index .iframe {
+        display: flex;
+        margin: 10px;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .index .iframe .youtube, .spotify{
+        width: 295px;
+        height: 205px;
+    }
+
+    /* discrografia */
+
+    .discografia .discografia-text{
+        font-size: 25px;
+    }
+
+    .discografia .albumes{
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .discografia .albumesspotify{
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+    }
+    
+    .discografia .albumesspotify .albumspotify{
+        gap: 15px;
+        width: 270px;
+        height: 300px;
+    }
+
+    /* tour */
+
+    .tour .gira{
+        font-size: 25px;
+    }
+
+    .tour .table .lugares, .fechas{
+        font-size: 13px;
+    }
+
+    /* formularios */
+
+    
+    .formularios{
+        width: 300px;
+        padding: 20px;
+    }
+
+    .formularios .contacto-text, .iniciasesion-text, .registrate{
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font-size: 25px;
+    }
+    
+    .formularios .conocerte, .perfil{
+        line-height: 25px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .formularios .form .formulario p input{
+        height: 40px; 
+        width: 275px;
+    }
+
+    .formularios .form .formulario p textarea{
+        width: 275px; 
+        height: 150px; 
+    }
+
+    .contacto .formulario fieldset div .enviar-01{
+        width: 60px;
+        height: 20px;
+    }
+}
+
+
+/* desktop */
+
+@media screen and (min-width:1024px) and (max-width:1440px){
+
+    /* header */
+
+    header nav ul li{
+        font-size: 25px;
+    }
+
+    /* home */
+
+    .index .lo-nuevo{
+        font-size: 35px;
+    }
+
+    /* discrografia */
+
+    
+    .discografia .discografia-text{
+        font-size: 35px;
+    }
+    
+    .discografia .albumes{
+        padding-top: 20px;
+        font-size: 25px;
+    }
+    
+    
+    /* albumes spotify discografia */
+    
+    .discografia .albumesspotify{
+        flex-flow: wrap row;
+        justify-content: center;
+    }
+
+    .discografia .albumesspotify .albumspotify{
+        width: 260px;
+        height: 290px;
+    }
+
+    /* tour */
+
+
+    /* formularios */
+
+    
+    .formularios{
+        width: 485px; 
+    }
+
+    .formularios .contacto-text, .iniciasesion-text, .registrate{
+        line-height: 35px;
+        padding-bottom: 20px;
+        font-size: 35px;
+    }
+    
+    .formularios .conocerte, .perfil{
+        line-height: 25px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .formularios .form .formulario p input{
+        width: 410px; 
+    }
+
+    .formularios .form .formulario p textarea{
+        width: 410px; 
+        height: 180px; 
+    }
+
+    .contacto .formulario fieldset div .enviar-01{
+        width: 60px;
+        height: 20px;
+    }
+}
+
