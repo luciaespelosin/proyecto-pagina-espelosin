@@ -2,7 +2,9 @@
 
 
 @import "base/variables";
-@import 'base/mapas';
+@import "base/mapas";
+@import "base/mixin";
+@import "base/extend";
 
 /* MENU */
 
@@ -32,12 +34,12 @@ header{
             text-align: center;
 
             a{
-                color: map-get($map: $standard, $key: color-1) ;
+                color: map-get($map: $standard, $key: color-1) ; //mapas
                 text-decoration: none;
             }
 
             a:hover{
-                color: map-get($map: $standard, $key: color-2) ;
+                color: map-get($map: $standard, $key: color-2) ; //mapas
             }
         }
     }
@@ -71,12 +73,12 @@ footer{
             padding-bottom: 10px;
 
             a{
-                color: map-get($map: $standard, $key: color-1);
+                color: map-get($map: $standard, $key: color-1); //mapas
                 text-decoration: none;
             }
 
             footer div h4 a:hover{
-                color: map-get($map: $standard, $key: color-2);
+                color: map-get($map: $standard, $key: color-2); //mapas
             }
         }
 
@@ -94,8 +96,7 @@ footer{
         text-align: center;
         line-height: 35px;
         color: whitesmoke;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 20px;
         font-size: 35px;
     }
     .iframe{
@@ -104,8 +105,7 @@ footer{
         justify-content: space-around;
         padding: 30px;
         .youtube, .spotify{
-            width: 540px;
-            height: 300px;
+            @include medidas(540px, 300px); //mixin
             padding: 10px;
         }
     }
@@ -145,8 +145,9 @@ footer{
 
         .albumspotify{
             gap: 15px;
-            width: 300px;
-            height: 300px;
+
+            @include medidas(300px, 300px); //mixin
+
             margin: 25px;
         }
     }
@@ -162,8 +163,9 @@ footer{
         text-align: center;
         line-height: 35px;
         color: $textcolor;
-        padding-top: 20px;
-        padding-bottom: 20px;
+
+        @extend %padding; //extend
+        
         font-size: 35px;
     }
 
@@ -202,12 +204,14 @@ footer{
 
 .formularios{
     display: grid;
-    width: 485px; 
-    height: auto;
+
+    @include medidas(485px, auto); //mixin
+
     margin: 80px auto;
     border-radius: 10px;  
-    padding-top: 30px;
-    padding-bottom: 20px;  
+
+    @extend %padding;  //extend
+
     background-color: rgb(39, 39, 39); 
     padding-left: 30px; 
 
@@ -218,8 +222,9 @@ footer{
             text-align: center;
             line-height: 35px;
             color: $textcolor;
-            padding-top: 20px;
-            padding-bottom: 20px;
+
+            @extend %padding; //extend
+
             font-size: 35px;
         }
 
@@ -229,7 +234,7 @@ footer{
                 text-align: center;
                 line-height: 35px;
                 color: whitesmoke;
-                padding: 20px;
+                @extend %padding;  //extend
                 font-size: 20px;
 
                 a{
@@ -255,8 +260,9 @@ footer{
 
             input{
                 background-color: transparent; 
-                width: 410px; 
-                height: 40px; 
+
+                @include medidas(410px, 40px); //mixin
+
                 border-radius: 5px;  
                 border-style: solid; 
                 border-width: 1px; 
@@ -269,8 +275,9 @@ footer{
 
             textarea{
                 background-color: #252525; 
-                width: 405px; 
-                height: 150px; 
+
+                @include medidas(405, 150px); //mixin
+
                 border-radius: 5px;  
                 border-style: solid; 
                 border-width: 1px; 
@@ -295,8 +302,9 @@ footer{
         }
 
         button{
-            width: 70px;
-            height: 30px;
+
+            @include medidas(70px, 30px); //mixin
+
             text-decoration: $textcolor;
         }
 
@@ -338,8 +346,8 @@ footer{
         font-family: $text-font;
         text-align: center;
         line-height: 35px;
-        color: whitesmoke;
-        padding: 20px;
+        color: $textcolor;
+        @extend %padding;  //extend
         font-size: 20px;
     }
 }
