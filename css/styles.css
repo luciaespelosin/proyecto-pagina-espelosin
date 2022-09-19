@@ -1,33 +1,24 @@
-/* aplicacion sass */
 /*variables*/
 .tour .gira, .formularios, .formularios .form h2, .formularios .form .text p, .contacto .contacto-text p {
   padding-top: 25px;
   padding-bottom: 20px; }
 
-/* MENU */
 header {
-  background-color: #050505;
+  background-color: transparent;
   top: 0;
   z-index: 0;
-  display: grid; }
+  display: flex;
+  flex-direction: column; }
   header a img {
-    padding-top: 15px;
     display: block;
     margin-left: auto;
-    margin-right: auto;
-    height: 59px;
-    width: 100px; }
-  header a img:hover {
-    height: 71px;
-    width: 120px; }
+    margin-right: auto; }
   header nav ul {
     list-style: none;
     text-align: center; }
     header nav ul li {
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       display: inline-block;
-      font-size: 20px;
-      padding: 15px;
       font-weight: bold;
       text-align: center; }
       header nav ul li a {
@@ -36,11 +27,9 @@ header {
       header nav ul li a:hover {
         color: #661414; }
 
-/* BODY */
 body {
   background-color: #0a0a0a; }
 
-/* FOOTER */
 footer {
   background-color: #050505;
   display: grid;
@@ -52,8 +41,7 @@ footer {
     footer div p {
       text-align: center;
       color: whitesmoke;
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      font-size: 17px; }
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
   footer div {
     display: flex; }
     footer div a {
@@ -62,7 +50,6 @@ footer {
     footer div a:hover {
       color: #661414; }
 
-/* HOME */
 .index .div-bg {
   display: flex;
   flex-direction: column;
@@ -82,20 +69,13 @@ footer {
   .index .div-bg p {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    line-height: 35px;
-    color: whitesmoke;
-    padding: 20px;
-    font-size: 30px; }
+    color: whitesmoke; }
   .index .div-bg a {
     display: flex;
     text-align: center;
     text-decoration: none;
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
-    min-width: 130px;
-    height: 40px;
-    width: 100px;
-    padding: 5px 10px;
     transition: all 0.3s ease;
     border-radius: 5px;
     border: whitesmoke;
@@ -114,7 +94,7 @@ footer {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/bg-02.png");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/suenos.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -122,20 +102,13 @@ footer {
   .index .div-bg-02 p {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    line-height: 35px;
-    color: whitesmoke;
-    padding: 20px;
-    font-size: 30px; }
+    color: whitesmoke; }
   .index .div-bg-02 a {
     display: flex;
     text-align: center;
     text-decoration: none;
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
-    min-width: 130px;
-    height: 40px;
-    width: 165px;
-    padding: 5px 10px;
     transition: all 0.3s ease;
     border-radius: 5px;
     border: whitesmoke;
@@ -143,31 +116,8 @@ footer {
   .index .div-bg-02 a:hover {
     background-color: #ced4da; }
 
-/* DISCOGRAFIA  */
 .discografia {
   display: grid; }
-  .discografia h2, .discografia h3, .discografia h4 {
-    color: whitesmoke;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    line-height: 35px;
-    text-align: center; }
-  .discografia h2 {
-    padding-top: 20px;
-    font-size: 35px; }
-  .discografia h3 {
-    padding-top: 20px;
-    font-size: 25px; }
-  .discografia h4 {
-    padding-top: 13px; }
-  .discografia .albumesspotify {
-    display: flex;
-    flex-flow: wrap row;
-    align-items: center; }
-    .discografia .albumesspotify .albumspotify {
-      gap: 15px;
-      width: 300px;
-      height: 300px;
-      margin: 25px; }
   .discografia .suenos {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/suenos.jpeg");
     background-position: center;
@@ -187,20 +137,13 @@ footer {
     .discografia .suenos p {
       font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      line-height: 35px;
-      color: whitesmoke;
-      padding: 20px;
-      font-size: 30px; }
+      color: whitesmoke; }
     .discografia .suenos a {
       display: flex;
       text-align: center;
       text-decoration: none;
       color: whitesmoke;
       font-family: 'Courier New', Courier, monospace;
-      min-width: 130px;
-      height: 40px;
-      width: 165px;
-      padding: 5px 10px;
       transition: all 0.3s ease;
       border-radius: 5px;
       border: whitesmoke;
@@ -226,20 +169,13 @@ footer {
     .discografia .guerras p {
       font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      line-height: 35px;
-      color: whitesmoke;
-      padding: 20px;
-      font-size: 30px; }
+      color: whitesmoke; }
     .discografia .guerras a {
       display: flex;
       text-align: center;
       text-decoration: none;
       color: whitesmoke;
       font-family: 'Courier New', Courier, monospace;
-      min-width: 130px;
-      height: 40px;
-      width: 165px;
-      padding: 5px 10px;
       transition: all 0.3s ease;
       border-radius: 5px;
       border: whitesmoke;
@@ -265,20 +201,13 @@ footer {
     .discografia .river p {
       font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      line-height: 35px;
-      color: whitesmoke;
-      padding: 20px;
-      font-size: 30px; }
+      color: whitesmoke; }
     .discografia .river a {
       display: flex;
       text-align: center;
       text-decoration: none;
       color: whitesmoke;
       font-family: 'Courier New', Courier, monospace;
-      min-width: 130px;
-      height: 40px;
-      width: 165px;
-      padding: 5px 10px;
       transition: all 0.3s ease;
       border-radius: 5px;
       border: whitesmoke;
@@ -304,20 +233,13 @@ footer {
     .discografia .naranja-02 p {
       font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      line-height: 35px;
-      color: whitesmoke;
-      padding: 20px;
-      font-size: 30px; }
+      color: whitesmoke; }
     .discografia .naranja-02 a {
       display: flex;
       text-align: center;
       text-decoration: none;
       color: whitesmoke;
       font-family: 'Courier New', Courier, monospace;
-      min-width: 130px;
-      height: 40px;
-      width: 165px;
-      padding: 5px 10px;
       transition: all 0.3s ease;
       border-radius: 5px;
       border: whitesmoke;
@@ -343,20 +265,13 @@ footer {
     .discografia .naranja p {
       font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      line-height: 35px;
-      color: whitesmoke;
-      padding: 20px;
-      font-size: 30px; }
+      color: whitesmoke; }
     .discografia .naranja a {
       display: flex;
       text-align: center;
       text-decoration: none;
       color: whitesmoke;
       font-family: 'Courier New', Courier, monospace;
-      min-width: 130px;
-      height: 40px;
-      width: 165px;
-      padding: 5px 10px;
       transition: all 0.3s ease;
       border-radius: 5px;
       border: whitesmoke;
@@ -382,20 +297,13 @@ footer {
     .discografia .ferro p {
       font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      line-height: 35px;
-      color: whitesmoke;
-      padding: 20px;
-      font-size: 30px; }
+      color: whitesmoke; }
     .discografia .ferro a {
       display: flex;
       text-align: center;
       text-decoration: none;
       color: whitesmoke;
       font-family: 'Courier New', Courier, monospace;
-      min-width: 130px;
-      height: 40px;
-      width: 165px;
-      padding: 5px 10px;
       transition: all 0.3s ease;
       border-radius: 5px;
       border: whitesmoke;
@@ -421,20 +329,13 @@ footer {
     .discografia .veintisiete p {
       font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      line-height: 35px;
-      color: whitesmoke;
-      padding: 20px;
-      font-size: 30px; }
+      color: whitesmoke; }
     .discografia .veintisiete a {
       display: flex;
       text-align: center;
       text-decoration: none;
       color: whitesmoke;
       font-family: 'Courier New', Courier, monospace;
-      min-width: 130px;
-      height: 40px;
-      width: 165px;
-      padding: 5px 10px;
       transition: all 0.3s ease;
       border-radius: 5px;
       border: whitesmoke;
@@ -460,20 +361,13 @@ footer {
     .discografia .espejos p {
       font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      line-height: 35px;
-      color: whitesmoke;
-      padding: 20px;
-      font-size: 30px; }
+      color: whitesmoke; }
     .discografia .espejos a {
       display: flex;
       text-align: center;
       text-decoration: none;
       color: whitesmoke;
       font-family: 'Courier New', Courier, monospace;
-      min-width: 130px;
-      height: 40px;
-      width: 165px;
-      padding: 5px 10px;
       transition: all 0.3s ease;
       border-radius: 5px;
       border: whitesmoke;
@@ -481,39 +375,36 @@ footer {
     .discografia .espejos a:hover {
       background-color: #ced4da; }
 
-/* TOUR */
 .tour {
   display: grid; }
   .tour .gira {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     text-align: center;
-    line-height: 35px;
-    color: whitesmoke;
-    font-size: 35px; }
+    color: whitesmoke; }
   .tour .table {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     text-align: left;
     color: whitesmoke;
     border: transparent; }
-    .tour .table .lugares, .tour .table .fechas {
+    .tour .table tbody tr .lugares, .tour .table tbody tr .fechas {
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       text-align: left;
       color: whitesmoke;
-      border: transparent;
-      font-size: 18px;
-      padding: 15px; }
-    .tour .table .botones {
+      border: transparent; }
+    .tour .table tbody tr a {
       color: black;
       background: whitesmoke;
       border: transparent;
-      size: 10px;
-      font-size: 15px;
-      padding: 8px;
-      border-radius: 10px; }
-    .tour .table .botones:hover {
+      border-radius: 10px;
+      text-align: right; }
+    .tour .table tbody tr a:hover {
       background-color: #d2d2d2; }
+    .tour .table tbody tr td h2 {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      text-align: left;
+      color: whitesmoke;
+      border: transparent; }
 
-/* FORMULARIOS CSS*/
 .formularios {
   display: grid;
   width: 485px;
@@ -525,50 +416,30 @@ footer {
   .formularios .form h2 {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     text-align: center;
-    line-height: 35px;
-    color: whitesmoke;
-    font-size: 35px; }
+    color: whitesmoke; }
   .formularios .form .text p {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     text-align: center;
-    line-height: 35px;
-    color: whitesmoke;
-    font-size: 20px; }
+    color: whitesmoke; }
     .formularios .form .text p a {
       color: #8f1b1b; }
     .formularios .form .text p a:hover {
       color: #661414; }
-  .formularios .form .formulario p h2 {
-    font-size: 15px; }
-  .formularios .form .formulario p p {
-    font-size: 14px;
-    color: #0e0e0e; }
   .formularios .form .formulario p span {
     color: red; }
   .formularios .form .formulario p input {
-    background-color: transparent;
+    background-color: #ff0000;
     width: 410px;
     height: 40px;
-    border-radius: 5px;
     border-style: solid;
-    border-width: 1px;
     border-style: none;
-    margin-top: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #252525; }
+    background-color: #212121; }
   .formularios .form .formulario p textarea {
-    background-color: #252525;
     width: 405;
     height: 150px;
-    border-radius: 5px;
     border-style: solid;
-    border-width: 1px;
     border-color: #252525;
-    margin-top: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    padding-top: 15px; }
+    background-color: #212121; }
   .formularios .form .formulario p label {
     display: block;
     text-align: center;
@@ -584,146 +455,163 @@ footer {
   .formularios .form .formulario p button:hover {
     background-color: #d2d2d2; }
   .formularios .form .formulario .aviso {
-    font-size: 15px;
     color: whitesmoke;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
 
-/* CONTACTO CSS */
 .contacto {
   display: grid; }
   .contacto h2 {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     text-align: center;
-    line-height: 35px;
     color: whitesmoke;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 35px;
     color: whitesmoke; }
   .contacto .contacto-text p {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     text-align: center;
-    line-height: 35px;
-    color: whitesmoke;
-    font-size: 20px;
-    padding: 15px; }
+    color: whitesmoke; }
 
-/* REGISTRATE CSS */
 .iniciar-sesion {
   display: grid; }
 
-/* INICIA SESION CSS */
 .iniciar-sesion2 {
   display: grid; }
 
 /* mediaqueries */
-/* mobile */
-@media screen and (min-width: 0px) and (max-width: 425px) {
-  /* header */
+@media (max-width: 1440px) {
   header nav ul li {
-    padding: 15px;
-    font-size: 20px; }
-  /* footer */
-  footer div p {
-    font-size: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  footer div a {
-    padding: 0px;
-    font-size: 15px; }
-  /* tour */
-  .tour .gira {
-    font-size: 25px; }
-  .tour .table .lugares {
-    font-size: 13px; }
-  .tour .table .fechas {
-    font-size: 13px; }
-  /* contacto */
-  .contacto h2 {
+    font-size: 23px;
+    padding: 15px; }
+  header a img {
+    padding-top: 15px;
+    height: 59px;
+    width: 100px; }
+  header a img:hover {
+    height: 71px;
+    width: 120px; }
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    footer div p {
+      font-size: 18px; }
+    footer div a {
+      font-size: 18px; }
+    footer .redes-sociales {
+      padding: 10px;
+      align-self: center;
+      width: 200px;
+      flex-direction: row;
+      justify-content: space-around; }
+      footer .redes-sociales a img {
+        width: 20px;
+        height: 20px; }
+  .index .div-bg p, .index .div-bg-02 p {
+    line-height: 35px;
+    padding: 20px;
     font-size: 30px; }
-  .contacto .contacto-text p {
-    font-size: 20px;
-    padding: 10px; }
-  /* formularios */
+  .index .div-bg a, .index .div-bg-02 a {
+    height: 40px;
+    width: auto;
+    padding: 5px 10px; }
+  .discografia .suenos p, .discografia .guerras p, .discografia .river p, .discografia .naranja-02 p, .discografia .naranja p, .discografia .ferro p, .discografia .veintisiete p, .discografia .espejos p {
+    line-height: 35px;
+    padding: 20px;
+    font-size: 30px; }
+  .discografia .suenos a, .discografia .guerras a, .discografia .river a, .discografia .naranja-02 a, .discografia .naranja a, .discografia .ferro a, .discografia .veintisiete a, .discografia .espejos a {
+    height: 40px;
+    width: 165px;
+    padding: 5px 10px; }
+  .tour .gira {
+    font-size: 35px;
+    line-height: 35px; }
+  .tour .table tbody tr td h2 {
+    font-size: 30px;
+    padding: 15px; }
+  .tour .table tbody tr .lugares, .tour .table tbody tr .fechas {
+    font-size: 18px;
+    padding: 15px; }
+  .tour .table tbody tr a {
+    size: 10px;
+    text-align: center;
+    font-size: 15px;
+    padding: 8px;
+    height: 40px;
+    width: 65px; }
   .formularios {
-    width: 300px;
+    width: 750px;
     padding: 20px; }
     .formularios .form h2 {
-      font-size: 30px; }
-    .formularios .form .text p {
-      font-size: 20px; }
-    .formularios .form .formulario p input {
-      height: 40px;
-      width: 275px; }
-    .formularios .form .formulario p textarea {
-      width: 275px;
-      height: 150px; }
-    .formularios .form .formulario fieldset div .enviar-01 {
-      width: 60px;
-      height: 20px; } }
-
-/* tablet */
-@media screen and (min-width: 426px) and (max-width: 768px) {
-  /* footer */
-  footer div p {
-    font-size: 18px; }
-  footer div a {
-    font-size: 18px; }
-  /* tour */
-  .tour .gira {
-    font-size: 30px; }
-  .tour .table .lugares {
-    font-size: 18px; }
-  .tour .table .fechas {
-    font-size: 18px; }
-  /* contacto */
-  .contacto h2 {
-    font-size: 30px; }
-  .contacto .contacto-text p {
-    font-size: 23px; }
-  /* formularios */
-  .formularios {
-    width: 400px; }
-    .formularios .form .formulario p label {
-      font-size: 18px; }
-    .formularios .form .formulario p input {
-      width: 335px; }
-    .formularios .form .formulario p textarea {
-      width: 335px; } }
-
-/* desktop */
-@media screen and (min-width: 769px) and (max-width: 1440px) {
-  /* header */
-  header nav ul li {
-    font-size: 25px; }
-  /* footer */
-  footer div p {
-    font-size: 18px; }
-  footer div a {
-    font-size: 18px; }
-  /* tour */
-  .tour .gira {
-    font-size: 35px; }
-  .tour .table .lugares {
-    font-size: 18px; }
-  .tour .table .fechas {
-    font-size: 18px; }
-  /* contacto */
-  .contacto h2 {
-    font-size: 35px; }
-  .contacto .contacto-text p {
-    font-size: 25px;
-    padding: 15px; }
-  /* formularios */
-  .formularios {
-    width: 700px; }
-    .formularios .form h2 {
+      line-height: 35px;
       font-size: 35px; }
     .formularios .form .text p {
-      font-size: 25px; }
-    .formularios .form .formulario p input {
-      width: 650px; }
-    .formularios .form .formulario p textarea {
-      width: 650px; }
-    .formularios .form .formulario p label {
-      font-size: 20px; } }
+      font-size: 25px;
+      line-height: 35px; }
+    .formularios .form .formulario {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      .formularios .form .formulario p input, .formularios .form .formulario p textarea {
+        margin-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border-width: 1px;
+        width: 700px; }
+      .formularios .form .formulario p .aviso {
+        font-size: 15px; }
+      .formularios .form .formulario button {
+        height: 40px;
+        width: 68px; }
+  .contacto h2 {
+    line-height: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 35px; }
+  .contacto .contacto-text p {
+    line-height: 35px;
+    font-size: 20px; } }
+
+@media (max-width: 768px) {
+  .formularios {
+    width: 425px; }
+    .formularios .form .formulario {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      .formularios .form .formulario p input, .formularios .form .formulario p textarea {
+        width: 370px; } }
+
+@media (max-width: 425px) {
+  header nav ul li {
+    font-size: 16px;
+    padding: 8px; }
+  .tour .gira {
+    font-size: 30px;
+    line-height: 30px; }
+  .tour .table tbody tr td h2 {
+    font-size: 25px;
+    padding: 10px; }
+  .tour .table tbody tr .lugares, .tour .table tbody tr .fechas {
+    font-size: 12px;
+    padding: 10px; }
+  .tour .table tbody tr a {
+    size: 8px;
+    font-size: 12px;
+    height: 35px;
+    width: 60px; }
+  .formularios {
+    width: 300px; }
+    .formularios .form h2 {
+      line-height: 30px;
+      font-size: 30px; }
+    .formularios .form .text p {
+      font-size: 20px;
+      line-height: 30px; }
+    .formularios .form .formulario p input, .formularios .form .formulario p textarea {
+      width: 265px; }
+    .formularios .form .formulario button {
+      height: 30px;
+      width: 65px; }
+  .contacto h2 {
+    line-height: 30px;
+    font-size: 30px; } }

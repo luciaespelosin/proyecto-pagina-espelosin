@@ -1,68 +1,52 @@
-/* aplicacion sass */
-
 
 @import "base/variables";
 @import "base/mapas";
 @import "base/mixin";
 @import "base/extend";
 
-/* MENU */
-
 header{
-    background-color: $header-color;
+    background-color: transparent;
     top: 0;
     z-index: 0;
-    display: grid;
-
+    display: flex;
+    flex-direction: column;
+    
     a{
         img{
-        padding-top: 15px;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        height: 59px;
-        width: 100px;
-        }
-
-        img:hover{
-            height: 71px;
-            width: 120px;
         }
     }
 
 
-    nav ul{
-        list-style: none;
-        text-align: center;
-
-        li{
-            font-family: $text-font;
-            display: inline-block;
-            font-size: 20px;
-            padding: 15px;
-            font-weight: bold;
+    nav{
+        ul{
+            list-style: none;
             text-align: center;
 
-            a{
-                color: map-get($map: $standard, $key: color-1) ; //mapas
-                text-decoration: none;
-            }
+            li{
+                font-family: $text-font;
+                display: inline-block;
+                font-weight: bold;
+                text-align: center;
 
-            a:hover{
-                color: map-get($map: $standard, $key: color-2) ; //mapas
+                a{
+                    color: map-get($map: $standard, $key: color-1) ; //mapas
+                    text-decoration: none;
+                }
+
+                a:hover{
+                    color: map-get($map: $standard, $key: color-2) ; //mapas
+                }
             }
         }
     }
-    
 }
-
-/* BODY */
 
 body{
     background-color: $bg-color;
 }
-
-/* FOOTER */
 
 footer{
     background-color: $header-color;
@@ -78,7 +62,6 @@ footer{
             text-align: center;
             color: $textcolor;
             font-family: $text-font;
-            font-size: 17px;
         }
     }
 
@@ -98,10 +81,7 @@ footer{
 
 }  
 
-/* HOME */
-
 .index{
-
     .div-bg{
         display: flex;
         flex-direction: column;
@@ -123,10 +103,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -135,10 +112,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 100px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -161,7 +134,7 @@ footer{
         height: auto;
         min-height: 35rem;
         padding: 15rem 0;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/bg-02.png");
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/suenos.jpeg");
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: scroll;
@@ -170,10 +143,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -182,10 +152,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 165px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -198,48 +164,8 @@ footer{
 
 } 
 
-/* DISCOGRAFIA  */
-
 .discografia{
     display: grid;
-
-    h2, h3, h4{
-        color: $textcolor;
-        font-family: $text-font;
-        line-height: 35px;
-        text-align: center;
-    }
-
-    h2{
-        padding-top: 20px;
-        font-size: 35px;
-    }
-
-    h3{
-        padding-top: 20px;
-        font-size: 25px; 
-    }
-
-    h4{
-        padding-top: 13px;
-    }
-
-    .albumesspotify{
-        display: flex;
-        flex-flow: wrap row;
-        align-items: center;
-
-        .albumspotify{
-            gap: 15px;
-
-            @include medidas(300px, 300px); //mixin
-
-            margin: 25px;
-        }
-    }
-
-
-    
 
     .suenos{
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/suenos.jpeg");
@@ -262,10 +188,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -274,10 +197,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 165px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -309,10 +228,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -321,10 +237,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 165px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -356,10 +268,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -368,10 +277,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 165px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -403,10 +308,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -415,10 +317,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 165px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -450,10 +348,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -462,10 +357,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 165px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -497,10 +388,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -509,10 +397,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 165px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -544,10 +428,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -556,10 +437,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 165px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -591,10 +468,7 @@ footer{
         p{
             font-family:'Courier New', Courier, monospace;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
-            padding: 20px;
-            font-size: 30px;
         }
 
         a{
@@ -603,10 +477,6 @@ footer{
             text-decoration: none;
             color: $textcolor;
             font-family: 'Courier New', Courier, monospace;
-            min-width: 130px;
-            height: 40px;
-            width: 165px;
-            padding: 5px 10px;
             transition: all 0.3s ease;
             border-radius: 5px;
             border: $textcolor;
@@ -619,20 +489,15 @@ footer{
 
 }
 
-/* TOUR */
-
 .tour{
     display: grid;
 
     .gira{
         font-family: $text-font;
         text-align: center;
-        line-height: 35px;
         color: $textcolor;
 
         @extend %padding; //extend
-        
-        font-size: 35px;
     }
 
     .table{
@@ -641,32 +506,38 @@ footer{
         color: $textcolor;
         border: transparent;
 
-        .lugares, .fechas{
-            font-family: $text-font;
-            text-align: left;
-            color: $textcolor;
-            border: transparent;
-            font-size: 18px;
-            padding: 15px;
+        tbody{
+            tr{
+                .lugares, .fechas{
+                    font-family: $text-font;
+                    text-align: left;
+                    color: $textcolor;
+                    border: transparent;
+                }
+                a{
+                    color: black;
+                    background: $textcolor;
+                    border: transparent;
+                    border-radius: 10px;
+                    text-align: right;
+                }
+                a:hover{
+                    background-color: rgb(210, 210, 210);
+                }
+                td{
+                    h2{
+                        font-family: $text-font;
+                        text-align: left;
+                        color: $textcolor;
+                        border: transparent;
+                    }
+                }
+            }
         }
 
-        .botones{
-            color: black;
-            background: $textcolor;
-            border: transparent;
-            size: 10px;
-            font-size: 15px;
-            padding: 8px;
-            border-radius: 10px;
-        }
-
-        .botones:hover{
-            background-color: rgb(210, 210, 210);
-        }
+        
     }
 }
-
-/* FORMULARIOS CSS*/
 
 .formularios{
     display: grid;
@@ -686,22 +557,18 @@ footer{
         h2{
             font-family: $text-font;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
 
             @extend %padding; //extend
 
-            font-size: 35px;
         }
 
         .text{
             p{
                 font-family: $text-font;
                 text-align: center;
-                line-height: 35px;
                 color: whitesmoke;
                 @extend %padding;  //extend
-                font-size: 20px;
 
                 a{
                     color: map-get($map: $standard, $key: color-1);
@@ -716,48 +583,26 @@ footer{
         .formulario{
 
             p{
-                h2{
-                    font-size: 15px;
-                }
-
-                p{
-                font-size: 14px; 
-                color: #0e0e0e; 
-                }
-                
-                
                 span{
                     color: red;
                 }
 
                 input{
-                    background-color: transparent; 
+                    background-color: #ff0000; 
 
                     @include medidas(410px, 40px); //mixin
 
-                    border-radius: 5px;  
                     border-style: solid; 
-                    border-width: 1px; 
                     border-style: none; 
-                    margin-top: 10px;  
-                    padding: 10px;
-                    margin-bottom: 20px; 
-                    background-color: #252525;
+                    background-color: #212121;
                 }
 
                 textarea{
-                    background-color: #252525; 
-
                     @include medidas(405, 150px); //mixin
 
-                    border-radius: 5px;  
                     border-style: solid; 
-                    border-width: 1px; 
-                    border-color: #252525; 
-                    margin-top: 10px;  
-                    padding-left: 10px;
-                    margin-bottom: 20px; 
-                    padding-top: 15px; 
+                    border-color: #252525;
+                    background-color: #212121;
                 } 
 
                 label{
@@ -785,7 +630,6 @@ footer{
             } 
 
             .aviso{
-                font-size: 15px;  
                 color: $textcolor;  
                 font-family: $text-font;
             }
@@ -794,9 +638,6 @@ footer{
     }
 }
 
-
-/* CONTACTO CSS */
-
 .contacto{
 
     display: grid;
@@ -804,11 +645,7 @@ footer{
     h2{
         font-family: $text-font;
         text-align: center;
-        line-height: 35px;
         color: $textcolor;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        font-size: 35px;
         color: $textcolor;
     }
 
@@ -816,315 +653,291 @@ footer{
         p{
             font-family: $text-font;
             text-align: center;
-            line-height: 35px;
             color: $textcolor;
             @extend %padding;  //extend
-            font-size: 20px;
-            padding: 15px;
         }
     }
 }
-
-/* REGISTRATE CSS */
 
 .iniciar-sesion{
     display: grid;
 }
 
-
-/* INICIA SESION CSS */
-
 .iniciar-sesion2{
     display: grid;
 }
 
-
-
 /* mediaqueries */
 
-/* mobile */
+@media (max-width:1440px){
+    header{
 
-@media screen and (min-width:0px) and (max-width:425px){
-    
-    /* header */ 
-    
-    header{ 
-        nav{ 
-            ul{ 
+        nav{
+            ul{
                 li{
+                    font-size: 23px;
                     padding: 15px;
-                    font-size: 20px;
+                }
+            }
+        }
+
+        a{
+            img{
+                padding-top: 15px;
+                height: 59px;
+                width: 100px;
+            }
+            img:hover{
+                height: 71px;
+                width: 120px;
+            }
+        }
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        div{
+            p{
+                font-size: 18px;
+            }
+        }
+        div{
+            a{
+                font-size: 18px;
+            }
+        }
+        .redes-sociales{ 
+            padding: 10px;
+            align-self: center;
+            width: 200px;
+            flex-direction: row;
+            justify-content: space-around;
+            a{
+                img{
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }
     }
 
-    /* footer */
-
-    footer{ 
-        div{
-            p{ 
-                font-size: 15px;
-                padding-top: 10px;
-                padding-bottom: 10px;
+    .index{
+        .div-bg, .div-bg-02{
+            p{
+                line-height: 35px;
+                padding: 20px;
+                font-size: 30px;
             }
-        }
-        div{
             a{
-                padding: 0px;
-                font-size: 15px;
+                height: 40px;
+                width: auto;
+                padding: 5px 10px;
             }
         }
     }
 
+    .discografia{
+        .suenos, .guerras, .river, .naranja-02, .naranja, .ferro, .veintisiete, .espejos{
+            p{
+            line-height: 35px;
+            padding: 20px;
+            font-size: 30px;
+            }
 
-    /* tour */
+            a{
+            height: 40px;
+            width: 165px;
+            padding: 5px 10px;
+            }
+        }
+    }
+
 
     .tour{
         .gira{
-            font-size: 25px;
+            font-size: 35px;
+            line-height: 35px;
         }
-
         .table{
-            .lugares{
-                font-size: 13px;
+            tbody{
+                tr{
+                    td{
+                        h2{
+                            font-size: 30px;
+                            padding: 15px;
+                        }  
+                    }
+                    .lugares, .fechas{
+                        font-size: 18px;
+                        padding: 15px;
+                    }
+                    a{
+                        size: 10px;
+                        text-align: center;
+                        font-size: 15px;
+                        padding: 8px;
+                        height: 40px;
+                        width: 65px;
+                    }
+                }
             }
-            .fechas{
-                font-size: 13px;   
-            }
+            
         }
     }
-
-    /* contacto */
-    
+    .formularios{
+        width: 750px;
+        padding: 20px;
+        .form{
+            h2{
+                line-height: 35px;
+                font-size: 35px;
+            }
+            .text{
+                p{
+                    font-size: 25px;
+                    line-height: 35px;
+                }
+            }
+            .formulario{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                p{
+                    input, textarea{ 
+                        margin-top: 10px;  
+                        padding-left: 10px;
+                        margin-bottom: 20px; 
+                        border-radius: 5px;  
+                        border-width: 1px; 
+                        width: 700px;
+                    }
+                    .aviso{
+                        font-size: 15px;  
+                    }
+                }
+                button{
+                    height: 40px;
+                    width: 68px;
+                }
+            }
+        }
+        
+    }
     .contacto{
         h2{
-            font-size: 30px;
+            line-height: 35px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 35px;
         }
         .contacto-text{
             p{
+                line-height: 35px;
                 font-size: 20px;
-                padding: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px){
+
+    .formularios{
+        width: 425px;
+
+        .form{
+            .formulario{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                p{
+                    input, textarea{ 
+                        width: 370px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width:425px){
+    header{
+
+        nav{
+            ul{
+                li{
+                    font-size: 16px;
+                    padding: 8px;
+                }
             }
         }
     }
 
-    /* formularios */
-
-    
+    .tour{
+        .gira{
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .table{
+            tbody{
+                tr{
+                    td{
+                        h2{
+                            font-size: 25px;
+                            padding: 10px;
+                        }  
+                    }
+                    .lugares, .fechas{
+                        font-size: 12px;
+                        padding: 10px;
+                    }
+                    a{
+                        size: 8px;
+                        font-size: 12px;
+                        height: 35px;
+                        width: 60px;
+                    }
+                }
+            }
+            
+        }
+    }
     .formularios{
         width: 300px;
-        padding: 20px;
 
         .form{
             h2{
+                line-height: 30px;
                 font-size: 30px;
             }
             .text{
                 p{
                     font-size: 20px;
+                    line-height: 30px;
                 }
             }
 
             .formulario{
                 p{
-                    input{
-                        height: 40px; 
-                        width: 275px;
-                    }
-                    textarea{
-                        width: 275px; 
-                        height: 150px; 
+                    input, textarea{
+                        width: 265px;
                     }
                 }
-
-                
-                
-                fieldset div .enviar-01{
-                    width: 60px;
-                    height: 20px;
+                button{
+                    height: 30px;
+                    width: 65px;
                 }
             }
-
-            
         }
     }
-
-}
-
-/* tablet */
-
-@media screen and (min-width:426px) and (max-width:768px){
-
-
-    /* footer */
-
-    footer{ 
-        div{
-            p{ 
-                font-size: 18px;
-            }
-        }
-        div{
-            a{
-                font-size: 18px;
-            }
-        }
-    }
-
-
-    /* tour */
-
-    .tour{
-        .gira{
-            font-size: 30px;
-        }
-
-        .table{
-            .lugares{
-                font-size: 18px;
-            }
-            .fechas{
-                font-size: 18px;   
-            }
-        }
-    }
-
-    /* contacto */
-    
     .contacto{
         h2{
+            line-height: 30px;
             font-size: 30px;
         }
-        .contacto-text{
-            p{
-                font-size: 23px;
-            }
-        }
     }
-
-    /* formularios */
-
-    .formularios{
-        width: 400px;
-
-        .form{
-
-            .formulario{
-                p{
-                    label{
-                        font-size: 18px
-                    }
-                    input{
-                        width: 335px;
-                    }
-                    textarea{
-                        width: 335px; 
-                    }
-                }
-            }
-        }
-    }
-
 }
 
-
-/* desktop */
-
-@media screen and (min-width:769px) and (max-width:1440px){
-
-        /* header */
-
-
-        header{
-            nav{
-                ul{
-                    li{
-                        font-size: 25px;
-                    }
-                }
-            }
-        }
-    
-    
-        /* footer */
-    
-        footer{ 
-            div{
-                p{ 
-                    font-size: 18px;
-                }
-            }
-            div{
-                a{
-                    font-size: 18px;
-                }
-            }
-        }
-    
-    
-        /* tour */
-    
-        .tour{
-            .gira{
-                font-size: 35px;
-            }
-    
-            .table{
-                .lugares{
-                    font-size: 18px;
-                }
-                .fechas{
-                    font-size: 18px;   
-                }
-            }
-        }
-    
-        /* contacto */
-        
-        .contacto{
-            h2{
-                font-size: 35px;
-            }
-            .contacto-text{
-                p{
-                    font-size: 25px;
-                    padding: 15px;
-                }
-            }
-        }
-    
-        /* formularios */
-    
-        
-        .formularios{
-    
-            width: 700px;
-    
-            .form{
-    
-                h2{
-                    font-size: 35px;
-                }
-                .text{
-                    p{
-                        font-size: 25px;
-                    }
-                }
-    
-                .formulario{
-                    p{
-                        input{
-                            width: 650px;
-                        }
-                        textarea{
-                            width: 650px; 
-                        }
-                        label{
-                            font-size: 20px;
-                        }
-                    }
-                }
-            }
-        }
-}
